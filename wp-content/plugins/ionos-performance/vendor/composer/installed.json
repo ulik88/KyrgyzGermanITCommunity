@@ -1,0 +1,401 @@
+{
+    "packages": [
+        {
+            "name": "ionos/extension-detection",
+            "version": "1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/package/extension-detection.git",
+                "reference": "163b49448c395cbfae7d8e490cd7842b04a1dd1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/7/packages/composer/archives/ionos/extension-detection.zip?sha=163b49448c395cbfae7d8e490cd7842b04a1dd1f",
+                "reference": "163b49448c395cbfae7d8e490cd7842b04a1dd1f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "ionos/php-coding-standard": "^1.0.0"
+            },
+            "type": "wordpress-package",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Ionos\\PluginDetection\\": "src/"
+                }
+            },
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s ."
+                ],
+                "phpcbf": [
+                    "phpcbf ."
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Florian Brinkmann",
+                    "email": "florian.brinkmann@ionos.com"
+                }
+            ],
+            "install-path": "../ionos/extension-detection"
+        },
+        {
+            "name": "ionos/htaccess-handler",
+            "version": "2.1.1",
+            "version_normalized": "2.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/package/htaccess-handler.git",
+                "reference": "966a94961e7e15ace6ac08c52890cd7d05b820d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/72/packages/composer/archives/ionos/htaccess-handler.zip?sha=966a94961e7e15ace6ac08c52890cd7d05b820d3",
+                "reference": "966a94961e7e15ace6ac08c52890cd7d05b820d3",
+                "shasum": ""
+            },
+            "require": {
+                "ionos/ionos-library": "^2.0.0"
+            },
+            "require-dev": {
+                "ionos/php-coding-standard": "^1.0.0",
+                "phpunit/phpunit": "^6",
+                "yoast/phpunit-polyfills": "^1.0.3"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Ionos\\HtaccessHandler\\": "src/"
+                }
+            },
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s ."
+                ],
+                "phpcbf": [
+                    "phpcbf ."
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Brinkmann",
+                    "email": "florian.brinkmann@ionos.com"
+                },
+                {
+                    "name": "Daniel Seydel",
+                    "email": "daniel.seydel@ionos.com"
+                }
+            ],
+            "description": "Htaccess Handler for Ionos",
+            "install-path": "../ionos/htaccess-handler"
+        },
+        {
+            "name": "ionos/ionos-library",
+            "version": "2.0.2",
+            "version_normalized": "2.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/package/ionos-library.git",
+                "reference": "9e0c910555b6f89f7c4dc108f2df2c66ab7b59b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/37/packages/composer/archives/ionos/ionos-library.zip?sha=9e0c910555b6f89f7c4dc108f2df2c66ab7b59b1",
+                "reference": "9e0c910555b6f89f7c4dc108f2df2c66ab7b59b1",
+                "shasum": ""
+            },
+            "require": {
+                "ionos/plugin-state-hook-handler": "^1.0.0"
+            },
+            "require-dev": {
+                "ionos/php-coding-standard": "^1.0.0",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "wordpress-dropin",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "test": [
+                    "composer install",
+                    "bin/wait-for-db.sh wordpress_tests wordpress_tests db_tests",
+                    "bin/install-wp-tests.sh wordpress_tests wordpress_tests wordpress_tests db_tests",
+                    "vendor/bin/phpunit --testsuite default"
+                ]
+            },
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Angelo Cali",
+                    "email": "angelo.cali@ionos.com"
+                },
+                {
+                    "name": "Gaelle Despoulain",
+                    "email": "gaelle.despoulain@ionos.com"
+                },
+                {
+                    "name": "Marko Feldmann",
+                    "email": "marko.feldmann@ionos.com"
+                },
+                {
+                    "name": "Matthias Pfefferle",
+                    "email": "matthias.pfefferle@ionos.com"
+                }
+            ],
+            "description": "IONOS library for internal WordPress plugins",
+            "install-path": "../ionos/ionos-library"
+        },
+        {
+            "name": "ionos/performance-feature-basic-settings",
+            "version": "1.0.4",
+            "version_normalized": "1.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/performance-features/basic-settings.git",
+                "reference": "8dc4ee9196631930e371edc50b84bc8b235fc9c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/73/packages/composer/archives/ionos/performance-feature-basic-settings.zip?sha=8dc4ee9196631930e371edc50b84bc8b235fc9c7",
+                "reference": "8dc4ee9196631930e371edc50b84bc8b235fc9c7",
+                "shasum": ""
+            },
+            "require": {
+                "ionos/htaccess-handler": "^2.0.0",
+                "ionos/ionos-library": "^2.0.0",
+                "ionos/settings-builder": "^1.0.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.10",
+                "behat/mink": "^1.10",
+                "dmore/behat-chrome-extension": "^1.4",
+                "dmore/chrome-mink-driver": "^2.8",
+                "ionos/php-coding-standard": "^1.0.0",
+                "phpunit/phpunit": "^6",
+                "yoast/phpunit-polyfills": "^1.0.3"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "load.php"
+                ],
+                "classmap": [
+                    "inc/"
+                ]
+            },
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s ."
+                ],
+                "phpcbf": [
+                    "phpcbf ."
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Brinkmann",
+                    "email": "florian.brinkmann@ionos.com"
+                },
+                {
+                    "name": "Christoph Daum",
+                    "email": "christoph.daum@ionos.com"
+                },
+                {
+                    "name": "Daniel Seydel",
+                    "email": "daniel.seydel@ionos.com"
+                }
+            ],
+            "description": "Performance caching feature",
+            "install-path": "../ionos/performance-feature-basic-settings"
+        },
+        {
+            "name": "ionos/performance-feature-caching",
+            "version": "2.0.7",
+            "version_normalized": "2.0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/performance-features/caching.git",
+                "reference": "d472e12022f2300bfaff9cef5e90c1b0ca590896"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/65/packages/composer/archives/ionos/performance-feature-caching.zip?sha=d472e12022f2300bfaff9cef5e90c1b0ca590896",
+                "reference": "d472e12022f2300bfaff9cef5e90c1b0ca590896",
+                "shasum": ""
+            },
+            "require": {
+                "ionos/extension-detection": "^1.0.0",
+                "ionos/htaccess-handler": "^2.0.0",
+                "ionos/ionos-library": "^2.0.0",
+                "ionos/plugin-state-hook-handler": "^1.0.0",
+                "ionos/settings-builder": "^1.0.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.10",
+                "behat/mink": "^1.10",
+                "dmore/behat-chrome-extension": "^1.4",
+                "dmore/chrome-mink-driver": "^2.8",
+                "ionos/php-coding-standard": "^1.0.0",
+                "phpunit/phpunit": "^6",
+                "yoast/phpunit-polyfills": "^1.0.3"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "load.php"
+                ],
+                "classmap": [
+                    "inc/"
+                ]
+            },
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s ."
+                ],
+                "phpcbf": [
+                    "phpcbf ."
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Brinkmann",
+                    "email": "florian.brinkmann@ionos.com"
+                },
+                {
+                    "name": "Angelo Cali",
+                    "email": "angelo.cali@ionos.com"
+                },
+                {
+                    "name": "Gaelle Despoulain",
+                    "email": "gaelle.despoulain@ionos.com"
+                },
+                {
+                    "name": "Marko Feldmann",
+                    "email": "marko.feldmann@ionos.com"
+                },
+                {
+                    "name": "Matthias Pfefferle",
+                    "email": "matthias.pfefferle@ionos.com"
+                }
+            ],
+            "description": "Performance caching feature",
+            "install-path": "../ionos/performance-feature-caching"
+        },
+        {
+            "name": "ionos/plugin-state-hook-handler",
+            "version": "1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/package/plugin-state-hook-handler.git",
+                "reference": "d59d244e291cdc376d724de2d464d623c22267da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/84/packages/composer/archives/ionos/plugin-state-hook-handler.zip?sha=d59d244e291cdc376d724de2d464d623c22267da",
+                "reference": "d59d244e291cdc376d724de2d464d623c22267da",
+                "shasum": ""
+            },
+            "require-dev": {
+                "ionos/php-coding-standard": "^1.0.0"
+            },
+            "type": "wordpress-package",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Ionos\\PluginStateHookHandler\\": "src/"
+                }
+            },
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s ."
+                ],
+                "phpcbf": [
+                    "phpcbf ."
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Florian Brinkmann",
+                    "email": "florian.brinkmann@ionos.com"
+                }
+            ],
+            "install-path": "../ionos/plugin-state-hook-handler"
+        },
+        {
+            "name": "ionos/settings-builder",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.git-wp.server.lan/wp-dev/package/settings-builder.git",
+                "reference": "4985080faff9d0decd674787c61a546c125b3f96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.git-wp.server.lan/api/v4/projects/58/packages/composer/archives/ionos/settings-builder.zip?sha=4985080faff9d0decd674787c61a546c125b3f96",
+                "reference": "4985080faff9d0decd674787c61a546c125b3f96",
+                "shasum": ""
+            },
+            "require-dev": {
+                "ionos/php-coding-standard": "^1.0.0"
+            },
+            "type": "wordpress-package",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Ionos\\SettingsPage\\": "src/",
+                    "Ionos\\SettingsPage\\Elements\\": "src/Elements/",
+                    "Ionos\\SettingsPage\\Interfaces\\": "src/Interfaces/"
+                }
+            },
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s ."
+                ],
+                "phpcbf": [
+                    "phpcbf ."
+                ]
+            },
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Seydel",
+                    "email": "daniel.seydel@ionos.com"
+                },
+                {
+                    "name": "Denise Stamatov",
+                    "email": "denise.stamatov@ionos.com"
+                },
+                {
+                    "name": "Florian Brinkmann",
+                    "email": "florian.brinkmann@ionos.com"
+                }
+            ],
+            "install-path": "../ionos/settings-builder"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
