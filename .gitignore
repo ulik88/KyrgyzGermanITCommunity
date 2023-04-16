@@ -5,10 +5,11 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
+/.metadata/
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
-/wp-content/plugins/index.php
+/wp-content/plugins*/
 /wp-content/themes/index.php
 /wp-includes/
 /index.php
