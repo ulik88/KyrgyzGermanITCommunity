@@ -7,7 +7,6 @@
 # you can delete this whole section/until Configuration.
 
 # caches ionos-performance
-cache/ionos-performance/https-kg-it.org
 .metadata/
 /wp-admin/
 /wp-content/index.php
