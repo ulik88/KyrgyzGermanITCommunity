@@ -11,6 +11,7 @@ cache/ionos-performance/https-kg-it.org
 .metadata/
 /wp-admin/
 /wp-content/index.php
+/wp-content/cache/ionos-performance/https-kg-it.org
 /wp-content/languages
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
